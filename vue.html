@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="js/vue.js"></script>-->
+    <script src="js/vue.js"></script>
+
+<body>
+<div id="app">
+    <button v-on:click="show = !show">toggle</button>
+    <transiton>
+        <p v-if="show"></p>
+    </transiton>
+</div>
+<script>
+    //var data = { counter:0 };
+    Vue.component('app-layout', {
+        template: '<div class="container">\
+        <header>\
+        <slot name="header"></slot>\
+            </header>\
+            <main>\
+            <slot></slot>\
+            </main>\
+            <footer>\
+            <slot name="footer"></slot>\
+            </footer>\
+            </div>'
+    });
+
+    new Vue({
+        el: '#app',
+        data: {
+            price: 0,
+            shipping: 0,
+            handling: 0,
+            discount: 0
+        },
+        computed: {
+            total: function () {
+                return ((
+                        this.price * 100 +
+                        this.shipping * 100 +
+                        this.handling * 100 -
+                        this.discount * 100
+                ) / 100).toFixed(2)
+            }
+        }
+    })
+</script>
+</body>
+</html>

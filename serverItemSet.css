@@ -1,0 +1,459 @@
+.g-serverSet-module h1 {
+	font-size: 16px;
+	color: #333;
+	padding: 32px 0 12px 10px;
+	border-bottom: 1px solid #2081c7;
+}
+.server-choose-item li {
+	position: relative;
+	font-size: 16px;
+	color: #333;
+	overflow: hidden;
+	border: 1px solid #e6e6e6;
+	margin-top: 20px;
+}
+.server-choose-item li.active {
+	border: 1px solid #ff9732;
+}
+.server-choose-item li.active .check {
+	background: url(../../imgs/icons_001.png) no-repeat 0 -460px;
+}
+.server-choose-item li label {
+	cursor: pointer;
+}
+.server-choose-item .check.active {
+	background: url(../../imgs/icons_001.png) no-repeat 0 -460px;
+}
+.server-choose-item .check {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 24px;
+	height: 24px;
+}
+.server-item-title {
+	line-height: 38px;
+	background-color: #f2f2f2;
+	padding-left: 10px;
+}
+.cancel-server {
+	float: right;
+	display: inline-block;
+	margin-right: 10px;
+	color: #999;
+}
+.server-item-title span {
+	display: inline-block;
+	width: 42px;
+}
+.server-item-title+div {
+	line-height: 58px;
+	padding-left: 20px;
+}
+.server-item-title+div>input {
+	margin-left: 20px;
+}
+.server-item-title+div>span {
+	display: inline-block;
+	padding-left: 100px;
+}
+.server-item-title+div>span+em {
+	width:100px;
+	display: inline-block;
+	font-size:14px;
+	padding-left: 5px;
+}
+.server-item-title+div>span+em label {
+	line-height: 18px;
+	position: relative;
+	padding-left: 15px;
+}
+.server-item-title+div>span+em label:before {
+	left: 0;
+	position: absolute;
+}
+.server-item-title+div>span input {
+	padding-left: 5px;
+	margin-right: 3px;
+	width: 93px;
+	height: 26px;
+	border: 1px solid #ccc;
+}
+.server-item-title+div>em+span {
+	color: #999;
+	font-size: 14px;
+    padding: 0;
+}
+
+
+/*服务号表设置*/
+.numset-table-warp {
+	width: 958px;
+	border: 1px solid #ccc;
+	margin: 30px auto 20px;
+}
+.server-numset-table {
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.server-numset-table caption {
+	text-align: left;
+	color: #999;
+	padding-left: 20px;
+	line-height: 40px;
+}
+.server-numset-table caption span {
+	cursor: pointer;
+}
+.server-numset-table caption span.s-color {
+	color: #2081c7;
+}
+.server-numset-table th, .server-numset-table td {
+	height: 40px;
+	width: 16%;
+	border-top: 1px solid #999;
+}
+.server-numset-table th {
+	color: #333;
+}
+.server-numset-table td {
+	color: #666;
+}
+.server-numset-table select {
+	width: 60px;
+	text-align: center;
+}
+.server-numset-table td a.s-color {
+	color: #2081c7;
+	cursor: pointer;
+}
+.server-numset-table .inner-table {
+	width: 100%;
+}
+.server-numset-table .inner-table a.inable {
+	cursor: pointer;
+}
+.server-numset-table .inner-table a.inable,.server-numset-table .inner-table a.del-row {
+	cursor: pointer;
+}
+.server-numset-table .inner-table tr.disabled {
+	background-color: #eee;
+}
+.server-numset-table .inner-table td {
+/* 	width: 20%; */
+	height: 40px;
+	border: none;
+}
+.inner-table input[name=yCount] {
+    width: 80px;
+}
+.checkbox-check-warp {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid #666;
+	border-radius: 2px;
+	margin-right: 5px;
+	top: 5px;
+}
+.checkbox-check-warp span {
+	position: absolute;
+	top: -22px;
+	left: 0;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	z-index: 12;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 2px;
+	background-color: #fff;
+}
+.save-set-warp {
+	padding: 130px 0 94px;
+	text-align: center;
+}
+.save-set-btn {
+	display: inline-block;
+	width: 304px;
+	color: #fff;
+	line-height: 40px;
+	background-color: #f16528;
+	border-radius: 2px;
+}
+
+/*家庭医生设置*/
+.title-tab{width: 100%; height: 37px; line-height: 40px; border-bottom: 1px solid #2081c7; background-color: #eee; font-size: 16px; margin-top:20px;}
+.title-item{padding:0 10px; color: #333; float: left;}
+.title-item.cur{color: #2081c7; border:1px solid #2081c7; border-top-width: 2px; border-bottom-color: #fff; background-color: #fff; height: 35px;}
+
+.family-doct-set{font-size: 14px; color: #666; width:1000px;}
+.family-doct-set .add-btn{padding:0 20px; height: 30px; line-height: 30px; color: #fff; display: inline-block; background-color: #2081c7; margin-top: 30px;}
+.family-doct-set .add-btn:hover{background-color: #248dd8;}
+.family-doct-set table,.step-three table{width: 100%; margin-top: 2px;border-top: solid 1px #999; border-bottom: solid 1px #999; margin-bottom: 30px;table-layout:auto;}
+.family-doct-set table thead,.step-three table thead{background-color: #f2f2f2;}
+.family-doct-set table th,.step-three table th{height:40px; line-height: 40px;text-align: center; font-weight: 700; padding: 0 5px;}
+.family-doct-set table td,.step-three table td{text-align: center; padding: 20px 5px; max-width: 180px; word-break:break-all;}
+.family-doct-set table tr.list{border-bottom: 1px dashed #ddd;}
+.family-doct-set table td ul li{width:100%; padding: 2px 0; height:20px; line-height:20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.family-doct-set table .total-price{font-weight: 700; font-size: 18px;}
+.t-red{color: red;}
+.family-doct-set table .handle-item,.family-doct-set table .handle-item:hover{color: #2081c7;}
+.family-doct-set table tbody tr:hover{background-color: #fff4e5; cursor: default;}
+
+.family-doct-layer{color:#666;}
+.family-doct-layer .layui-layer-title{display:none;}
+.family-doct-layer .layui-layer-content{padding:30px 50px; min-height:550px;margin-bottom: 20px;}
+.family-doct-layer h1.step-title{font-size:16px; height:50px; line-height:50px; border-bottom:1px solid #ccc;}
+.step-one .step-det{width:470px; margin:30px auto 10px;}
+.step-one .step-det input[type='text']{width:360px; height:36px; padding-left:10px;}
+.layui-form-select ul li.layui-this{background-color:#fff4e6; color:#333}
+.layui-form-select ul{padding:0;}
+.layui-textarea{height:150px;}
+/*.layui-form-item .textareaTit{bottom:-30px!important; right:0!important;}*/
+.blue-btn{padding:0 20px; height: 30px; line-height: 30px; color: #fff; display: inline-block;
+margin-right:20px; background-color: #2081c7; margin-top: 30px; border:0;}
+.blue-btn:hover{background-color: #248dd8; cursor:pointer;}
+.step-two .step-det{width:100%; margin:20px auto 10px;}
+.step-two .info-item{
+	 border-bottom:1px solid #ccc;
+	 padding:0 0 10px;
+}
+.step-two .info{
+	padding:5px 20px;
+	overflow:hidden;
+	display:inline-block;
+	height:20px;
+}
+.step-two .info label.title{
+	width:100px;
+	height:20px;
+	line-height:20px;
+	display:inline-block;
+	text-align:right;
+}
+.step-two .info span.con{
+	display:inline-block;
+}
+.step-two .info01{
+	width:540px;
+}
+.step-two .info02{
+	width:200px;
+}
+.step-two .info03{
+	height:auto;
+	width:100%;
+}
+.step-two .info03 span.con{
+	width:84%;
+	vertical-align:top;
+}
+.step-two .sub-info{
+	padding:10px 30px;
+}
+.step-two .sub-item{
+	width:90%;
+	margin:20px auto 10px;
+}
+.step-two .sub-title{
+	padding-bottom:10px;
+	border-bottom:1px dashed #ccc;
+	height:20px;
+}
+.step-two .sub-item .store-selector .content{
+	left:auto;
+	right:-80px;
+	top:20px;
+}
+.step-two ul.sub-item-list{
+	width:90%;
+	margin:20px auto;
+}
+.step-two ul.sub-item-list li{
+	display:inline-block;
+	margin:5px;
+	padding:5px 10px;
+	border:1px solid #ddd;
+	background-color:#fff;
+	border-radius:3px;
+	cursor:pointer;
+	position:relative;
+}
+.step-two ul.sub-item-list li.active,.step-two ul.sub-item-list li:hover{
+	border-color:#2081c7;
+	color:#2081c7;
+}
+.tips .layui-layer-setwin{
+	display:none;
+}
+.define-item ul.sub-item-list{
+	overflow:hidden;
+}
+.define-item ul.sub-item-list li{
+	position:relative;
+	padding:5px 20px;
+	height:20px;
+	float:left;
+}
+.define-item ul li .del-btn{
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:-1px;
+	right:0;
+	display:none;
+	cursor:pointer;
+	background:url('../../imgs/new/icon-del-30.png') no-repeat;
+}
+.define-item ul li:hover .del-btn{
+	display:block;
+}
+.define-item ul li .del-btn .del-con{
+	width:18px;
+	height:18px;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.define-item .add-item-btn{
+	width:30px;
+	height:30px;
+	background:red;
+	float:left;
+	margin:6px;
+}
+.define-item ul li input[type="text"]{
+	border:0;
+	width:60px;
+	padding:0;
+	margin:0;
+	height:20px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.define-item ul li .con{
+	display:block;
+}
+
+/*提示框*/
+.item-tips-wrap{
+	position:absolute;
+	top:28px;
+	left:30px;
+	font-size:0;
+	z-index:999;
+	display:none;
+}
+.item-tips-wrap span{display:inline-block;}
+.item-tips-wrap .tips-sj{
+	width:14px;
+	height:8px;
+	background:url('../../imgs/new/icon-tip-sj.png') top left no-repeat;
+	position:absolute;
+	top:-7px;
+	left:30px;
+}
+.item-tips-wrap .tips-con{
+	font-size:12px;
+	min-width:206px;
+	padding:10px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	background-color:#fff;
+	border:1px solid #ddd;
+	color:#666;
+	border-radius:3px;
+	box-shadow:3px 3px 5px #efefef;
+	word-break:break-all;
+}
+.item-tips-wrap .tips-con .bold{
+	font-weight:700;
+}
+.step-three table td{
+	min-height:30px;
+	padding:5px;
+	/*white-space: nowrap;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.step-three table td input[type="text"]{
+	width:60px;
+}
+.step-three table td.price-td{
+	width:140px;
+}
+.step-three table td input.price{
+	width:124px;
+	font-size:12px;
+}
+.step-three table td input:focus{
+	border-color:#2081c7;
+}
+.t-blue{
+	color:#2081c7;
+}
+.step-three table{
+	margin-bottom:0;
+	border-bottom:0;
+}
+.step-three .info-item{
+	padding:0;
+}
+.step-three .wrap-placeholder{
+	text-align:left;
+	padding-left:10px!important;
+}
+.step-three table .warn-tips{
+	padding-left:15px;
+	height:16px;
+	line-height:16px;
+	background:url('../../imgs/new/icon-red-warn.png') 0 4px no-repeat;
+	font-size:12px;
+}
+#fam-doc-layer label.error{
+	color:red;
+}
+.step-three label.error{
+	display:block;
+	font-size:13px;
+}
+.step-three input[type='number']{
+	width: 60px;
+	height: 30px;
+	box-sizing: border-box;
+	padding-left: 3px;
+	border: 1px solid #d2d2d2;
+	line-height:30px;
+}
+.step-two .store-selector .close{
+	z-index:99;
+	left:65px;
+	top:10px;
+}
+.family-doct-layer a.blue-btn:hover{
+	color:#fff;
+	background-color:#248dd8;
+}
+.norecord{
+	width:100%;
+	height:400px;
+	text-align:center;
+	display:none;
+	overflow:hidden;
+}
+.norecord span{
+	display:inline-block;
+	margin-top:150px;
+	height:62px;
+	line-height:62px;
+	padding-left:70px;
+	font-size:18px;
+	color:#b2b2b2;
+	background:url('../../imgs/new/icon_meijilu.png') left top no-repeat;
+}

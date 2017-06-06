@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="1.css"/>
+</head>
+<body>
+<div class="con">
+    <canvas id="cv"></canvas>
+</div>
+<script type="text/javascript">
+    var cnv = document.getElementById('cv');
+    var ctx = cnv.getContext("2d");
+    cnv.width = cnv.parentNode.offsetWidth;
+    cnv.height = cnv.parentNode.offsetHeight;
+    ctx.fillStyle = "rgba(0,222,255, 0.2)";
+    ctx.beginPath();
+    ctx.moveTo(0,cnv.height/2);
+    ctx.lineTo(cnv.width,cnv.height/2);
+    ctx.lineTo(cnv.width,cnv.height);
+    ctx.lineTo(0,cnv.height);
+    ctx.lineTo(0,cnv.height/2);
+    ctx.closePath();
+    ctx.fill();
+</script>
+</body>
+</html>

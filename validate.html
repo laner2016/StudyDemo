@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <style type="text/css">
+    .error{ color:red; }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">表单验证实例</h3>
+        <form role="form" class="form-horizontal" id="regForm" method="get">
+            <div class="form-group">
+                <label class="control-label col-md-3">用户名：</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control uname" id="uname" name="uname" placeholder="请输入手机号\邮箱">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">用户名：</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control uname" id="uname" name="uname" placeholder="\邮箱">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">密码：</label>
+                <div class="col-md-9">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">确认密码：</label>
+                <div class="col-md-9">
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3">评论：</label>
+                <div class="col-md-9">
+                    <textarea rows="10" cols="10" name="pl" id="pl"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3">
+                    <button type="submit">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+<script>
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("提交事件!");
+        }
+    });
+    $(function(){
+        var n=$('.uname');
+        console.log($('.uname'));
+        console.log(n[0]);
+        for(var i=0;i< n.length;i++){
+            $('.uname').attr('name','hahaha');
+
+        }
+
+        $("#regForm").validate({
+            rules: {
+                uname: {
+                    required: true,
+                    minlength: 6,
+                },
+                password: {
+                    required: true,
+                    minlength: 6,
+                },
+                confirm_password: {
+                    required: true,
+                    equalTo: "#password"
+                },
+                pl: {
+                    required:true,
+                    minlength:15,
+                    maxlength:300
+                }
+            },
+            messages: {
+               uname: {
+                    required: "请输入用户名",
+                    minlength: "用户名不能小于6个字符",
+                },
+                password: {
+                    required: "请输入密码",
+                    minlength: "密码不能小于6个字符",
+                },
+                confirm_password: {
+                    required: "请输入确认密码",
+                    equalTo: "输入的密码不一致"
+                },
+                pl: {
+                    required: "请输入评论",
+                    minlength: "请输入15-300个字",
+                }
+            }
+        });
+    });
+</script>
+</body>

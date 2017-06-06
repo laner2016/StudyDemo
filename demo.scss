@@ -1,0 +1,20 @@
+
+$btnColorClass: (primary #0078E7 #fff) (blue #00A3CF #fff) (orange #F47837 #fff)!default;
+@mixin btn-color($btnColor:#e6e6e6,$textColor:#333){
+    color: $textColor;
+    background-color: $btnColor;
+    border:1px solid darken($btnColor,5%);
+    border-color: lighten($btnColor,10%) darken($btnColor,10%) darken($btnColor,10%) lighten($btnColor,10%);
+    &:hover{
+      background-color: darken($btnColor,5%);
+    }
+}
+
+@each $colorClass in $btnColorClass{
+    $btnName: nth($colorClass,1);
+    $btnColor: nth($colorClass,2);
+    $textColor: nth($colorClass,3);
+    .btn-#{$btnName}{
+      @include btn-color($btnColor,$textColor);
+    }
+}

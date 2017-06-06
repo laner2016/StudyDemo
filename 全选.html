@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <!--<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>-->
+    <!--<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>-->
+</head>
+<body>
+<form id="test-form" action="test">
+    <legend>请选择想要学习的编程语言：</legend>
+    <fieldset>
+        <p><label class="selectAll"><input type="checkbox"> <span class="selectAll">全选</span><span class="deselectAll">全不选</span></label> <a href="#0" class="invertSelect">反选</a></p>
+        <p><label><input type="checkbox" name="lang" value="javascript"> JavaScript</label></p>
+        <p><label><input type="checkbox" name="lang" value="python"> Python</label></p>
+        <p><label><input type="checkbox" name="lang" value="ruby"> Ruby</label></p>
+        <p><label><input type="checkbox" name="lang" value="haskell"> Haskell</label></p>
+        <p><label><input type="checkbox" name="lang" value="scheme"> Scheme</label></p>
+        <p><button type="submit">Submit</button></p>
+    </fieldset>
+</form>
+<script>
+    $(function(){
+        var
+                form = $('#test-form'),
+                langs = form.find('[name=lang]'),
+                selectAll = form.find('label.selectAll :checkbox'),
+                selectAllLabel = form.find('label.selectAll span.selectAll'),
+                deselectAllLabel = form.find('label.selectAll span.deselectAll'),
+                invertSelect = form.find('a.invertSelect');
+
+// 重置初始化状态:
+        form.find('*').show().off();
+        form.find(':checkbox').prop('checked', false).off();
+        deselectAllLabel.hide();
+// 拦截form提交事件:
+        form.off().submit(function (e) {
+            e.preventDefault();
+            alert(form.serialize());
+        });
+        //全选
+        function checkAll(){
+            selectAllLabel.hide();
+            deselectAllLabel .show();
+        }
+        //全不选
+        function uncheckAll(){
+            selectAllLabel.show();
+            deselectAllLabel.hide();
+        }
+        selectAll.on('change',function(){
+            if($(this).prop('checked') && selectAllLabel.css('display')!=='none'){
+                langs.prop('checked',true);
+                checkAll();
+                $(this).prop('checked',false);
+            }
+            if($(this).prop('checked') && deselectAllLabel.css('display')!=='none'){
+                langs.prop('checked',false);
+                uncheckAll();
+                $(this).prop('checked',false);
+            }
+        });
+        invertSelect.on('click',function(){
+            langs.each(function(){
+                var c=$(this).prop('checked');
+                $(this).prop('checked',!c)
+            });
+            langs.trigger('change');
+        });
+        langs.on('change',function(){
+            var count = 0,uncount = 0;
+            langs.each(function(){
+                if($(this).prop('checked')){
+                    count=count+1;
+                }
+            });
+            if(count == langs.length){
+                checkAll();
+            }else if(count < langs.length) {
+                uncheckAll();
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.btn-primary {
+  color: #fff;
+  background-color: #0078E7;
+  border: 1px solid #006bce;
+  border-color: #1b91ff #005eb4 #005eb4 #1b91ff; }
+  .btn-primary:hover {
+    background-color: #006bce; }
+
+.btn-blue {
+  color: #fff;
+  background-color: #00A3CF;
+  border: 1px solid #008fb6;
+  border-color: #03c9ff #007b9c #007b9c #03c9ff; }
+  .btn-blue:hover {
+    background-color: #008fb6; }
+
+.btn-orange {
+  color: #fff;
+  background-color: #F47837;
+  border: 1px solid #f3681f;
+  border-color: #f79967 #eb590d #eb590d #f79967; }
+  .btn-orange:hover {
+    background-color: #f3681f; }
+
+/*# sourceMappingURL=demo.css.map */
